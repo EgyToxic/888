@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل تدريب call center فودافون</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #e60012 0%, #ff4757 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            position: relative;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #e60012;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e60012;
+            display: inline-block;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 15px 12px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 14px;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        tbody tr:hover {
+            background: #e3f2fd;
+            transform: scale(1.01);
+            transition: all 0.3s ease;
+        }
+        
+        .code {
+            background: #ff4757;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: monospace;
+            font-size: 16px;
+            display: inline-block;
+            box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3);
+        }
+        
+        .cost {
+            background: #2ed573;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        
+        .cost.paid {
+            background: #ffa502;
+        }
+        
+        .subsection {
+            margin: 30px 0;
+        }
+        
+        .subsection-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-right: 20px;
+            border-right: 4px solid #e60012;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-right: 5px solid #ffd93d;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #e60012;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(230, 0, 18, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-family: 'Cairo', Arial, sans-serif;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230, 0, 18, 0.4);
+            background: #cc0010;
+        }
+        
+        .print-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 15px rgba(230, 0, 18, 0.3);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+            
+            .code {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="printPage()">طباعة PDF</button>
+    
+    <script>
+        function printPage() {
+            // إخفاء الزر أثناء الطباعة
+            const printBtn = document.querySelector('.print-btn');
+            printBtn.style.display = 'none';
+            
+            // طباعة الصفحة
+            window.print();
+            
+            // إظهار الزر مرة أخرى بعد الطباعة
+            setTimeout(() => {
+                printBtn.style.display = 'block';
+            }, 1000);
+        }
+        
+        // التأكد من عمل الزر على الأجهزة المختلفة
+        document.addEventListener('DOMContentLoaded', function() {
+            const printBtn = document.querySelector('.print-btn');
+            printBtn.addEventListener('click', function() {
+                printPage();
+            });
+        });
+    </script>
+    
+    <div class="container">
+        <div class="header">
+            <h1>دليل تدريب call center فودافون</h1>
+            <p>الدليل الشامل للأكواد والخدمات وبرنامج التدريب</p>
+        </div>
+        
+        <div class="content">
+            <!-- جدول العناوين -->
+            <div class="section">
+                <h2 class="section-title">برنامج التدريب - 15 يوم</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>اليوم</th>
+                            <th>العنوان الرئيسي</th>
+                            <th>المواضيع الفرعية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>NPS + Data + Policy + HR + Phone Etiquette + QMS + ISMS</td>
+                            <td>Phone Etiquette & Ne2olha Ezay<br>NPS (Net Promoter Score)<br>FCR, AHT, Quality<br>ISON Policy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Overview + Information System + Security</td>
+                            <td>Knowledge Overview<br>Prepaid vs Postpaid vs Corporate<br>Siebel, CCAT, Es2alny<br>E-SIM, IPCC</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>CX Part 1</td>
+                            <td>Customer Experience الجزء الأول</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>CX Part 2</td>
+                            <td>Customer Experience الجزء الثاني</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Flex + Flex BD Sheet + ACP Important Call</td>
+                            <td>Flex Rate Plans (2017, 2019, 2021, 2024)<br>Flex Features, Family, Share<br>ACP, Flexaweya</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Prepaid + Policy</td>
+                            <td>Prepaid Rate Plans<br>PUK/PIN, SIM Swap<br>Transfer of Ownership</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Services 1</td>
+                            <td>Balance Transfer, Call Tone<br>MNP, EOCN, International<br>Roaming, Wi-Fi Calling</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 8</strong></td>
+                            <td>Alerting Service + CCAT + Services Test</td>
+                            <td>Alerting Services<br>SR, Deny of Usage<br>System Practicing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 9</strong></td>
+                            <td>Data Stage + ICARE + Mobile Internet</td>
+                            <td>MI Bundles, ACP & AFB<br>VF Plus Bundles<br>MI Troubleshooting</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 10</strong></td>
+                            <td>System Practicing + Network + Follow Up + VAS</td>
+                            <td>Network Complaints, 4G<br>VAS Tools, 365 Program<br>Connectivity Issues</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 11</strong></td>
+                            <td>Auto Fail Calls + Quality + Escalation & Complaints</td>
+                            <td>Escalation Types<br>Complaints Handling<br>Final Tests</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- جدول الأكواد الأساسية -->
+            <div class="section">
+                <h2 class="section-title">الأكواد الأساسية</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الكود</th>
+                            <th>الاستخدام</th>
+                            <th>التكلفة</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">881</span></td>
+                            <td>معرفة الفاتورة (IVR)</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>للعملاء postpaid</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">8821</span></td>
+                            <td>معرفة الفاتورة (IVR)</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>للعملاء postpaid</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*888*1#</span></td>
+                            <td>معرفة الفاتورة (USSD)</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>للعملاء postpaid</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*60#</span></td>
+                            <td>معرفة استهلاك Flex</td>
+                            <td><span class="cost">مجاني 3 مرات</span></td>
+                            <td>ثم 5 قروش</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*010#</span></td>
+                            <td>خدمات شكرا والرصيد</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>متعدد الخيارات</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*365#</span></td>
+                            <td>معرفة العروض</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>برنامج 365</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*200#</span></td>
+                            <td>عروض الإنترنت</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>5 عروض يومياً</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*888*4#</span></td>
+                            <td>تفعيل Mobile Internet</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*888*41#</span></td>
+                            <td>إلغاء Mobile Internet</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*2000#</span></td>
+                            <td>التحكم في باقات MI</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- أكواد Flex -->
+            <div class="section">
+                <h2 class="section-title">أكواد Flex الكاملة</h2>
+                
+                <div class="subsection">
+                    <h3 class="subsection-title">باقات Flex الأساسية</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الباقة</th>
+                                <th>التكلفة</th>
+                                <th>الفلكسات</th>
+                                <th>المميزات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*030#</span></td>
+                                <td>Flex 40</td>
+                                <td><span class="cost paid">30 جنيه</span></td>
+                                <td>1000 Flex</td>
+                                <td>WhatsApp مجاني</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*045#</span></td>
+                                <td>Flex 60</td>
+                                <td><span class="cost paid">45 جنيه</span></td>
+                                <td>2000 Flex</td>
+                                <td>WhatsApp مجاني</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*070#</span></td>
+                                <td>Flex 90</td>
+                                <td><span class="cost paid">70 جنيه</span></td>
+                                <td>3000 Flex</td>
+                                <td>WhatsApp + Family + ترفيهي</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*0100#</span></td>
+                                <td>Flex 130</td>
+                                <td><span class="cost paid">100 جنيه</span></td>
+                                <td>5500 Flex</td>
+                                <td>WhatsApp + Family + ترفيهي</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*02000#</span></td>
+                                <td>Flex 260</td>
+                                <td><span class="cost paid">200 جنيه</span></td>
+                                <td>13000 Flex</td>
+                                <td>WhatsApp + Family + ترفيهي</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد إدارة Flex</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*225#</span></td>
+                                <td>تجديد الباقة</td>
+                                <td><span class="cost">حسب الباقة</span></td>
+                                <td>لو مفيش رصيد كافي أو ACP</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*909#</span></td>
+                                <td>Flex Family</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>لإدارة العائلة</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*880*88#</span></td>
+                                <td>خدمات ترفيهية مجانية</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>للفليكس 90+ فقط</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*880*23#</span></td>
+                                <td>تحديد MI Limit</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>حد استهلاك النت</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*880*28#</span></td>
+                                <td>تحديد Cross Net Limit</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>حد الشبكات الأخرى</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*880*33#</span></td>
+                                <td>تفعيل Auto Repurchase</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>إعادة الشراء التلقائي</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد تحويل المكالمات (Call Divert)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>نوع التحويل</th>
+                                <th>تفعيل</th>
+                                <th>إلغاء</th>
+                                <th>فحص</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CF Unconditional</strong><br>(تحويل جميع المكالمات)</td>
+                                <td><span class="code">**21*رقم#</span></td>
+                                <td><span class="code">##21#</span></td>
+                                <td><span class="code">*#21#</span></td>
+                                <td>تحويل كل المكالمات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CF Busy</strong><br>(عند الانشغال)</td>
+                                <td><span class="code">**67*رقم#</span></td>
+                                <td><span class="code">##67#</span></td>
+                                <td><span class="code">*#67#</span></td>
+                                <td>عند انشغال الخط</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CF No Reply</strong><br>(عند عدم الرد)</td>
+                                <td><span class="code">**61*رقم#</span></td>
+                                <td><span class="code">##61#</span></td>
+                                <td><span class="code">*#61#</span></td>
+                                <td>بعد عدة رنات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CF Not Reached</strong><br>(عند عدم التوفر)</td>
+                                <td><span class="code">**62*رقم#</span></td>
+                                <td><span class="code">##62#</span></td>
+                                <td><span class="code">*#62#</span></td>
+                                <td>خط مغلق أو خارج التغطية</td>
+                            </tr>
+                            <tr>
+                                <td><strong>إلغاء جميع التحويلات</strong></td>
+                                <td>-</td>
+                                <td><span class="code">##002#</span></td>
+                                <td>-</td>
+                                <td>يلغي كل أنواع التحويل</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <!-- جدول Wrong Data Process -->
+            <div class="section">
+                <h2 class="section-title">Wrong Data Process - عملية تصحيح البيانات</h2>
+                
+                <div class="subsection">
+                    <h3 class="subsection-title">القواعد الأساسية</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المبدأ</th>
+                                <th>التفسير</th>
+                                <th>السبب</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>لا تسجيل عبر call center</strong></td>
+                                <td>ممنوع نهائياً تسجيل أو تعديل بيانات العملاء عبر الهاتف</td>
+                                <td>تجنب النزاع على الملكية والـ Fraud</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الفرع فقط</strong></td>
+                                <td>جميع عمليات تسجيل وتعديل البيانات في الفرع</td>
+                                <td>ضمان الهوية والأمان</td>
+                            </tr>
+                            <tr>
+                                <td><strong>إثبات الملكية مطلوب</strong></td>
+                                <td>العميل يجب أن يحضر ما يثبت أنه المالك الحقيقي</td>
+                                <td>الحماية من الاحتيال</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">المتطلبات لتسجيل البيانات في الفرع</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المتطلب</th>
+                                <th>التفاصيل</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. الشريحة الحالية</strong></td>
+                                <td>الشريحة الموجودة مع العميل حالياً</td>
+                                <td><span class="cost paid">إجباري</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. خطة الأسعار الحالية</strong></td>
+                                <td>معرفة النظام أو الباقة الحالية</td>
+                                <td><span class="cost paid">إجباري</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. تحويلات الرصيد</strong></td>
+                                <td>ثلاثة أرقام تم استقبال أرصدة منها (مرور أكثر من 30 يوم)</td>
+                                <td><span class="cost">اختياري (من 8)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. كروت الشحن</strong></td>
+                                <td>ثلاثة كروت شحن (فئة الكارت وتاريخ تقريبي)</td>
+                                <td><span class="cost">اختياري (من 8)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. باقة الإنترنت</strong></td>
+                                <td>باقة الإنترنت الحالية على الخط إن وجدت</td>
+                                <td><span class="cost">اختياري (من 8)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>6. خدمات أخرى</strong></td>
+                                <td>الإنترنت المنزلي والرقم الأرضي إن وجد</td>
+                                <td><span class="cost">اختياري (من 8)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>7. تاريخ التفعيل</strong></td>
+                                <td>تاريخ تفعيل الخط</td>
+                                <td><span class="cost">اختياري (من 8)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>8. خدمات مشترك فيها</strong></td>
+                                <td>Call Tone, MCK, Blacklist (مرور أكثر من 30 يوم)</td>
+                                <td><span class="cost">اختياري (من 8)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="note">
+                        <strong>شرط مهم:</strong> العميل يحتاج لحضور 5 حاجات من الـ 8 حاجات المذكورة أعلاه (شاملة الاثنين الإجباريين)
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">الرد المعياري للعميل</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الحالة</th>
+                                <th>النص المطلوب</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>طلب تسجيل البيانات</strong></td>
+                                <td>"مش مسموح لنا نهائياً نسجل أو نعدل بيانات العملاء من خلال خدمة العملاء. تعديل البيانات وتسجيل الخطوط بيكون من خلال الفرع فقط وده عشان نتجنب حالات النزاع على الملكية والـ Fraud اللي ممكن يحصل."</td>
+                            </tr>
+                            <tr>
+                                <td><strong>توجيه للفرع</strong></td>
+                                <td>"يشرفنا حضرتك في الفرع ويكون معاك ما يثبت إنك المالك للخط. هتحتاج تحضر 5 حاجات من الـ 8 حاجات اللي هقولهالك عليها..."</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">أمثلة على البيانات المقبولة</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>نوع البيان</th>
+                                <th>مثال</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>كروت الشحن</strong></td>
+                                <td>"شحنت كارت 25 جنيه يوم 15 الشهر اللي فات"</td>
+                                <td>لا يشترط وجود الكارت، فقط الفئة والتاريخ التقريبي</td>
+                            </tr>
+                            <tr>
+                                <td><strong>تحويل رصيد</strong></td>
+                                <td>"استقبلت 10 جنيه من رقم 0100xxxxxx"</td>
+                                <td>يشترط مرور أكثر من 30 يوم</td>
+                            </tr>
+                            <tr>
+                                <td><strong>خدمات</strong></td>
+                                <td>"مشترك في Call Tone من شهرين"</td>
+                                <td>يشترط مرور أكثر من 30 يوم على الاشتراك</td>
+                            </tr>
+                            <tr>
+                                <td><strong>شحن إلكتروني</strong></td>
+                                <td>"شحنت من أمان/فوري/مصاري"</td>
+                                <td>ذكر طريقة الشحن والتاريخ التقريبي</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">حالات خاصة</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الحالة</th>
+                                <th>الإجراء</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>عميل لديه بيانات قديمة خاطئة</strong></td>
+                                <td>نفس الإجراء - التوجه للفرع</td>
+                                <td>لا استثناءات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>عميل يدعي أنه سجل البيانات مسبقاً</strong></td>
+                                <td>التحقق من النظام + التوجه للفرع إذا لزم الأمر</td>
+                                <td>قد تكون البيانات لم تُدخل بشكل صحيح</td>
+                            </tr>
+                            <tr>
+                                <td><strong>عميل غير قادر على الحضور للفرع</strong></td>
+                                <td>لا يوجد بدائل - الحضور للفرع إجباري</td>
+                                <td>لأسباب الأمان</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="note">
+                    <strong>تذكير مهم:</strong><br>
+                    • هذا الإجراء لحماية العميل وليس لتعقيد الأمور<br>
+                    • في call center نوجه فقط - لا نسجل أو نعدل<br>
+                    • أي محاولة لكسر هذه القواعد قد تعرض الشركة والعميل للخطر<br>
+                    • العميل يجب أن يفهم أن هذا لحمايته من الاحتيال
+                </div>
+            </div>
+
+            <!-- جدول Prepaid Policy -->
+            <div class="section">
+                <h2 class="section-title">Prepaid Policy - سياسات خطوط الكارت</h2>
+                
+                <div class="subsection">
+                    <h3 class="subsection-title">PIN & PUK Policy</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>النوع</th>
+                                <th>المحاولات</th>
+                                <th>النتيجة</th>
+                                <th>الحل</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>PIN 1</strong></td>
+                                <td>3 مرات خاطئة</td>
+                                <td>الشريحة تُقفل</td>
+                                <td>يحتاج PUK 1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PIN 2</strong></td>
+                                <td>3 مرات خاطئة</td>
+                                <td>خدمات معينة تُقفل</td>
+                                <td>يحتاج PUK 2</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PUK 1</strong></td>
+                                <td>10 مرات خاطئة</td>
+                                <td>الشريحة تتلف نهائياً</td>
+                                <td>استبدال شريحة في الفرع</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PUK 2</strong></td>
+                                <td>10 مرات خاطئة</td>
+                                <td>خدمات معينة تتعطل</td>
+                                <td>مراجعة البيانات + call center</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="note">
+                        <strong>مصادر الحصول على PUK:</strong><br>
+                        • علبة الخط/العقد الأصلي<br>
+                        • موقع فودافون vf.eg<br>
+                        • تطبيق Ana Vodafone<br>
+                        • الكود *888*الرقم#<br>
+                        • خدمة العملاء 888 (مع مراجعة البيانات)
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">SIM Swap Policy</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>نوع الاستبدال</th>
+                                <th>السعر</th>
+                                <th>المكان</th>
+                                <th>المتطلبات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>استبدال عادي (4G → 4G)</td>
+                                <td><span class="cost paid">20 جنيه</span></td>
+                                <td>الفرع فقط</td>
+                                <td>البطاقة الشخصية</td>
+                            </tr>
+                            <tr>
+                                <td>استبدال بسبب الفقدان/السرقة</td>
+                                <td><span class="cost paid">25 جنيه</span></td>
+                                <td>الفرع فقط</td>
+                                <td>البطاقة الشخصية</td>
+                            </tr>
+                            <tr>
+                                <td>ترقية من 3G إلى 4G</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>الفرع فقط</td>
+                                <td>البطاقة الشخصية</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="note">
+                        <strong>حدود الاستبدال:</strong> 7 مرات في السنة، مرتين في الشهر<br>
+                        <strong>ملاحظة:</strong> لا يتم استبدال الشرائح عبر call center نهائياً
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Validity Period - فترة الصلاحية</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المدة</th>
+                                <th>الشرط</th>
+                                <th>النتيجة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>125 يوم</strong></td>
+                                <td>عدم وجود أي استهلاك</td>
+                                <td>الخط يرجع ملكيته للشركة</td>
+                            </tr>
+                            <tr>
+                                <td>تجديد الصلاحية</td>
+                                <td>أي استهلاك (مكالمة، رسالة، نت، شحن، باقة)</td>
+                                <td>تبدأ 125 يوم جديدة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Lost/Stolen Service</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الإجراء</th>
+                                <th>من يستطيع الطلب</th>
+                                <th>طريقة التفعيل</th>
+                                <th>طريقة الإلغاء</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>إيقاف الخط مؤقتاً</strong></td>
+                                <td>• صاحب الخط<br>• أي شخص يعرف البيانات</td>
+                                <td>call center 888<br>(مراجعة البيانات)</td>
+                                <td>صاحب الخط فقط<br>(مراجعة كاملة)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="note">
+                        <strong>هام:</strong> في حالة فقدان البيانات، نراجع:<br>
+                        • أرقام كان يكلمها<br>• كروت شحن استخدمها<br>• تحويلات رصيد<br>
+                        • خطة الأسعار الحالية<br>• خدمات مشترك فيها
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Over Scratched Cards</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>حالة الكارت</th>
+                                <th>المتطلبات</th>
+                                <th>الحل</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>الرقم المسلسل موجود + 5 أرقام أو أكثر</td>
+                                <td>• الرقم المسلسل كامل<br>• 5 أرقام واضحة على الأقل</td>
+                                <td><span class="cost">*858*1# أو 858</span></td>
+                            </tr>
+                            <tr>
+                                <td>الرقم المسلسل موجود + أقل من 5 أرقام</td>
+                                <td>• الرقم المسلسل كامل<br>• أقل من 5 أرقام</td>
+                                <td><span class="cost paid">التوجه للفرع</span></td>
+                            </tr>
+                            <tr>
+                                <td>الرقم المسلسل غير موجود</td>
+                                <td>الرقم المسلسل مخدوش أو غير واضح</td>
+                                <td><span class="cost paid">لا يمكن المساعدة</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Extra Verification</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الخدمات التي تتطلب تحقق إضافي</th>
+                                <th>المتطلبات الأساسية</th>
+                                <th>المتطلبات الإضافية</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>• Ana Vodafone account management<br>• تغيير خطة الأسعار<br>• باقات التجوال<br>• Lost/stolen Barring<br>• Releasing dialed calls</td>
+                                <td>• الاسم<br>• رقم البطاقة<br>• العنوان</td>
+                                <td>إجابة على سؤالين من:<br>• الرصيد الحالي<br>• خطة الأسعار<br>• آخر عملية شحن<br>• تاريخ آخر شحن<br>• باقات الإنترنت</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="note">
+                        <strong>هام:</strong> إذا لم يستطع العميل الإجابة على الأسئلة الإضافية، نوجهه لـ Self-help tools إذا كانت متاحة
+                    </div>
+                </div>
+            </div>
+
+            <!-- جدول الكروت المخدوشة -->
+            <div class="section">
+                <h2 class="section-title">قواعد الكروت المخدوشة</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الحالة</th>
+                            <th>المتطلبات</th>
+                            <th>الكود المستخدم</th>
+                            <th>النتيجة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الرقم المسلسل موجود + 5 أرقام أو أكثر</strong></td>
+                            <td>• الرقم المسلسل كامل<br>• على الأقل 5 أرقام واضحة من كود الشحن</td>
+                            <td><span class="code">*858*1#</span><br>أو الخدمة الصوتية <span class="code">858</span></td>
+                            <td><span class="cost">يتم الشحن</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>الرقم المسلسل موجود + أقل من 5 أرقام</strong></td>
+                            <td>• الرقم المسلسل كامل<br>• أقل من 5 أرقام واضحة</td>
+                            <td>-</td>
+                            <td><span class="cost paid">يجب التوجه للفرع</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>الرقم المسلسل غير كامل أو غير موجود</strong></td>
+                            <td>• الرقم المسلسل مخدوش أو غير واضح</td>
+                            <td>-</td>
+                            <td><span class="cost paid">لا يمكن المساعدة</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>طريقة استخدام الكود للكروت المخدوشة:</strong><br>
+                    • اتصل بـ <strong>*858*1#</strong> أو الخدمة الصوتية <strong>858</strong><br>
+                    • أدخل رقم الكارت (ضع * مكان كل رقم غير واضح)<br>
+                    • أدخل الرقم المسلسل عند الطلب<br>
+                    • إذا كانت البيانات صحيحة سيتم الشحن تلقائياً
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد الإنترنت والشبكة</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*888*4#</span></td>
+                                <td>تنشيط الإنترنت</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>تفعيل خدمة الإنترنت + refresh</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*888*41#</span></td>
+                                <td>إلغاء خدمة الإنترنت</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>إيقاف خدمة Mobile Internet</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*2000*14#</span></td>
+                                <td>باقة إنترنت 14 جنيه</td>
+                                <td><span class="cost paid">14 جنيه</span></td>
+                                <td>باقة شهرية</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*2000#</span></td>
+                                <td>قائمة باقات الإنترنت</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>عرض جميع الباقات المتاحة</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*00#</span></td>
+                                <td>VF Plus Bundles</td>
+                                <td><span class="cost">حسب الباقة</span></td>
+                                <td>YouTube, TikTok, PUBG, WatchIT</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*2000*28#</span></td>
+                                <td>إعداد Roll Over</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>تفعيل/إلغاء ترحيل الميجا</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*2000*9#</span></td>
+                                <td>متابعة استهلاك الإنترنت</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>معرفة الميجابايتس المتبقية</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*2000*99#</span></td>
+                                <td>تجديد آخر باقة إنترنت</td>
+                                <td><span class="cost">حسب الباقة</span></td>
+                                <td>إعادة الاشتراك في نفس الباقة</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*200*99#</span></td>
+                                <td>تجديد عرض الإنترنت</td>
+                                <td><span class="cost">حسب العرض</span></td>
+                                <td>تجديد العروض من *200#</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*135#</span></td>
+                                <td>إبلاغ عن ضعف الشبكة</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>Network Coverage Report</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*8880#</span></td>
+                                <td>شكوى ضعف إشارة الشبكة</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>تقرير مفصل عن مشاكل الشبكة</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*99*200#</span></td>
+                                <td>تجديد عرض الإنترنت (الشهر الثاني)</td>
+                                <td><span class="cost">حسب العرض</span></td>
+                                <td>للعروض من *200#</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد النظام الداخلي</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*3000#</span></td>
+                                <td>استعادة كلمة مرور النظام</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>للموظفين - اختيار من القائمة ثم إدخال Staff ID</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <!-- جدول الأكواد الإضافية المهمة -->
+            <div class="section">
+                <h2 class="section-title">أكواد إضافية مهمة</h2>
+                
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد إلغاء الخدمات</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*055*0#</span></td>
+                                <td>إلغاء Call Tone</td>
+                                <td><span class="cost paid">1 قرش</span></td>
+                                <td>إلغاء نغمة الاستقبال</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*010*010#</span></td>
+                                <td>إلغاء الخدمات الإخبارية</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>خدمات 9999 - اختيار الخدمة</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*9000#</span></td>
+                                <td>إلغاء EOCN (معرفة الرصيد)</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>إظهار الرصيد بعد المكالمة</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*9009*0#</span></td>
+                                <td>إلغاء EOCN الشهرية</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>للفليكس فقط</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*888*31#</span></td>
+                                <td>إلغاء MCK الشهرية</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>الاحتفاظ بالمكالمات</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد Vodafone Cash</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*9#</span></td>
+                                <td>Vodafone Cash USSD</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>خدمات فودافون كاش</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">7001</span></td>
+                                <td>Vodafone Cash خدمة العملاء</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>24/7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد كروت الفكة</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*86#</span></td>
+                                <td>التحكم في خيارات الفكة</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>القائمة الرئيسية</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*86*0#</span></td>
+                                <td>تفعيل كارت الفكة</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>للشحن على الطاير</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*86*1#</span></td>
+                                <td>تفعيل دقائق + ميجا في الفكة</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>On-net, X-net, MBs</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*86*2#</span></td>
+                                <td>إلغاء استخدام X-Net في الفكة</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>دقائق فودافون + نت فقط</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*85#</span></td>
+                                <td>تحويل الرصيد لكارت فكة</td>
+                                <td><span class="cost paid">70% من سعر الكارت</span></td>
+                                <td>شراء كروت فكة من الرصيد الأساسي</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد التجوال (Roaming)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*888*5#</span></td>
+                                <td>تفعيل خدمة التجوال</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>Roaming Service</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*888*51#</span></td>
+                                <td>إلغاء خدمة التجوال</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>Roaming Service</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*202#</span></td>
+                                <td>التحكم في باقات التجوال</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>Roaming Bundles</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*202*50#</span></td>
+                                <td>باقة تجوال يومية</td>
+                                <td><span class="cost paid">50 جنيه</span></td>
+                                <td>25 MB + 25 رسالة + 5+5 مكالمات</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*202*300#</span></td>
+                                <td>باقة تجوال أسبوعية</td>
+                                <td><span class="cost paid">300 جنيه</span></td>
+                                <td>500 MB + 60 رسالة + 60+10 مكالمات</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">أكواد معرفة الرصيد والخدمات</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*9001#</span></td>
+                                <td>تفعيل EOCN</td>
+                                <td><span class="cost">مجاني</span></td>
+                                <td>معرفة الرصيد بعد المكالمة - 19 قرش/رسالة</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*9009#</span></td>
+                                <td>تفعيل EOCN الشهرية</td>
+                                <td><span class="cost paid">1 جنيه/شهر</span></td>
+                                <td>للفليكس فقط</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*888*3#</span></td>
+                                <td>تفعيل MCK الشهرية</td>
+                                <td><span class="cost paid">5 ج/شهر أو 20 ق/يوم</span></td>
+                                <td>الاحتفاظ بالمكالمات</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- جدول شروط استرجاع الرصيد -->
+            <div class="section">
+                <h2 class="section-title">شروط استرجاع الرصيد (Balance Add)</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الشرط</th>
+                            <th>التفاصيل</th>
+                            <th>الهدف</th>
+                            <th>كيفية التحقق</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>عدم الاستهلاك الكثيف</strong></td>
+                            <td>العميل لم يستهلك أكثر من 10% من الباقة</td>
+                            <td>التأكد من وجود مشكلة فعلية</td>
+                            <td>CCAT >> Product View<br>أو تحقق الاستهلاك</td>
+                        </tr>
+                        <tr>
+                            <td><strong>عدم التجديد على النوتة</strong></td>
+                            <td>العميل لم يجدد الباقة على حساب الشركة (ACP/AFB)</td>
+                            <td>منع الاستغلال</td>
+                            <td>فحص DA 50, DA 233<br>أو وجود عروض Block</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الشحن العادي فقط</strong></td>
+                            <td>منع الشحن من فوري الذي يجدد الباقة تلقائياً</td>
+                            <td>ضمان الشحن كرصيد صافي</td>
+                            <td>تحقق طريقة الشحن الأخيرة<br>Account History</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مشكلة تقنية مؤكدة</strong></td>
+                            <td>وجود خطأ في النظام أو محاسبة خاطئة</td>
+                            <td>العدالة للعميل</td>
+                            <td>فحص Balance Dispute<br>أو System Error</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>ملاحظات مهمة عن استرجاع الرصيد:</strong><br>
+                    • يتم استخدام Adjustment Codes مناسبة (C-BD-Service, C-BD-Rataplan)<br>
+                    • يجب كتابة سبب واضح في خانة Reason<br>
+                    • لا يتم إرجاع الرصيد في حالات الاستهلاك الطبيعي<br>
+                    • يتطلب موافقة الـ Leader في حالات معينة
+                </div>
+            </div>
+
+            <!-- جدول شروط نقل ملكية الخط -->
+            <div class="section">
+                <h2 class="section-title">شروط نقل ملكية الخط</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المتطلب</th>
+                            <th>التفاصيل</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>حضور الطرفين</strong></td>
+                            <td>• المالك الحالي للخط<br>• المالك الجديد</td>
+                            <td>يجب حضورهما معاً في الفرع</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الأوراق المطلوبة</strong></td>
+                            <td>• بطاقة المالك الحالي<br>• بطاقة المالك الجديد<br>• أصل البطاقات (ليس صور)</td>
+                            <td>للتحقق من الهوية</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الرسوم</strong></td>
+                            <td><span class="cost paid">25 جنيه</span></td>
+                            <td>رسوم نقل الملكية</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مكان النقل</strong></td>
+                            <td>في الفرع فقط</td>
+                            <td>لا يتم عبر call center</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التنفيذ</strong></td>
+                            <td>فورياً في نفس الجلسة</td>
+                            <td>لا يحتاج وقت انتظار</td>
+                        </tr>
+                        <tr>
+                            <td><strong>حالة الخط</strong></td>
+                            <td>يجب أن يكون الخط نشطاً ومسدداً</td>
+                            <td>لا مستحقات مالية</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">خطوات نقل الملكية</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الخطوة</th>
+                                <th>الإجراء</th>
+                                <th>المسؤول</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. التحقق</strong></td>
+                                <td>التأكد من هوية الطرفين</td>
+                                <td>موظف الفرع</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. فحص الخط</strong></td>
+                                <td>التأكد من حالة الخط ووجود مستحقات</td>
+                                <td>موظف الفرع</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. دفع الرسوم</strong></td>
+                                <td>دفع 25 جنيه رسوم النقل</td>
+                                <td>المالك الجديد عادة</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. التوقيع</strong></td>
+                                <td>توقيع الطرفين على نموذج النقل</td>
+                                <td>المالك القديم والجديد</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. التنفيذ</strong></td>
+                                <td>تحديث بيانات الملكية في النظام</td>
+                                <td>موظف الفرع</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="note">
+                    <strong>ملاحظات مهمة عن نقل الملكية:</strong><br>
+                    • إجراء نهائي لا يمكن التراجع عنه بسهولة<br>
+                    • المالك الجديد يصبح مسؤولاً عن كامل الخط والمستحقات<br>
+                    • في call center نوجه العميل للفرع فقط<br>
+                    • لا نقوم بأي إجراءات نقل ملكية عبر الهاتف
+                </div>
+            </div>
+
+            <!-- جدول Money Back Guarantee -->
+            <div class="section">
+                <h2 class="section-title">خدمات Money Back Guarantee</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>نوع الخدمة</th>
+                            <th>أمثلة</th>
+                            <th>طريقة الإرجاع</th>
+                            <th>الشروط</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>باقات Flex</strong></td>
+                            <td>• Flex 40, 60, 90, 130, 260<br>• Flex 2021, 2024</td>
+                            <td>Ana Vodafone App<br>Money Back tab</td>
+                            <td>خلال مدة محددة + استيفاء الشروط</td>
+                        </tr>
+                        <tr>
+                            <td><strong>باقات الإنترنت</strong></td>
+                            <td>• Plus Combo Bundles<br>• MI Bundles<br>• New Plus Bundles</td>
+                            <td>Ana Vodafone App<br>Money Back tab</td>
+                            <td>إرجاع الرصيد + إيقاف الباقة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>خدمات المحتوى</strong></td>
+                            <td>• Call Tone (كول تون)<br>• عالم صالح<br>• عالم محمد صالح<br>• خدمات 9999</td>
+                            <td>Ana Vodafone App<br>أو Chatbot<br>أو Voice Bot</td>
+                            <td>إثبات عدم الاشتراك أو الاشتراك بالخطأ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الخدمات الإخبارية</strong></td>
+                            <td>• خدمات الأخبار<br>• خدمات المعلومات<br>• خدمات الترفيه</td>
+                            <td>Ana Vodafone App<br>أو call center</td>
+                            <td>إثبات عدم الاشتراك</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">خطوات Money Back</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الخطوة</th>
+                                <th>الإجراء</th>
+                                <th>النتيجة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. الإبلاغ</strong></td>
+                                <td>العميل يبلغ عن مشكلة في الخدمة</td>
+                                <td>فتح طلب Money Back</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. التحقق</strong></td>
+                                <td>النظام يتحقق من أهلية العميل</td>
+                                <td>Capping rules & eligibility check</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. الاستبيان</strong></td>
+                                <td>العميل يملأ استبيان "What went wrong?"</td>
+                                <td>جمع معلومات عن سبب المشكلة</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. الإرجاع</strong></td>
+                                <td>إرجاع الرصيد + إلغاء الاشتراك</td>
+                                <td>رسالة تأكيد للعميل</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="note">
+                    <strong>ملاحظات مهمة عن Money Back:</strong><br>
+                    • المتاح من خلال Ana Vodafone App بشكل رئيسي<br>
+                    • للخدمات التي عليها شعار "Money Back"<br>
+                    • إرجاع فوري للرصيد مع إلغاء الخدمة<br>
+                    • يتطلب ملء استبيان قصير عن سبب المشكلة<br>
+                    • لا يشمل جميع الخدمات - فقط المحددة من فودافون
+                </div>
+            </div>
+
+            <!-- جدول أنواع الخطوط -->
+            <div class="section">
+                <h2 class="section-title">أنواع الخطوط وأسعارها</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>نوع الخط</th>
+                            <th>السعر</th>
+                            <th>المتطلبات</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Prepaid</strong><br>(خط كارت مدفوع مقدماً)</td>
+                            <td><span class="cost paid">85 جنيه</span></td>
+                            <td>• المتجر<br>• البطاقة الشخصية</td>
+                            <td>الأكثر انتشاراً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Postpaid</strong><br>(خط فاتورة)</td>
+                            <td><span class="cost paid">200 جنيه</span></td>
+                            <td>• المتجر<br>• البطاقة الشخصية<br>• ATP (تأمين)</td>
+                            <td>نظام RED الحالي</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Corporate</strong><br>(خطوط الشركات)</td>
+                            <td><span class="cost">غير محدد</span></td>
+                            <td>• المتجر<br>• السجل التجاري<br>• البطاقة الضريبية</td>
+                            <td>اتصال 247 أو 16247</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- جدول أسعار الشرائح -->
+            <div class="section">
+                <h2 class="section-title">أسعار الشرائح</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>نوع الشريحة</th>
+                            <th>العملية</th>
+                            <th>السعر</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>E-SIM</strong><br>(شريحة إلكترونية)</td>
+                            <td>خط جديد</td>
+                            <td><span class="cost paid">350 جنيه</span></td>
+                            <td>شامل الضريبة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E-SIM</strong></td>
+                            <td>استبدال من فيزيكال لإلكترونية</td>
+                            <td><span class="cost paid">300 جنيه</span></td>
+                            <td>شامل الضريبة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Physical SIM</strong><br>(شريحة عادية)</td>
+                            <td>استبدال عادي (4G إلى 4G)</td>
+                            <td><span class="cost paid">20 جنيه</span></td>
+                            <td>في الفرع</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Physical SIM</strong></td>
+                            <td>استبدال بسبب الفقدان/السرقة</td>
+                            <td><span class="cost paid">25 جنيه</span></td>
+                            <td>في الفرع</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Physical SIM</strong></td>
+                            <td>ترقية من 3G إلى 4G</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>في الفرع</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>ملاحظات مهمة عن الشرائح:</strong><br>
+                    • حد التبديل: 7 مرات في السنة، مرتين في الشهر<br>
+                    • E-SIM متاحة للمصريين فقط<br>
+                    • يجب إلغاء Multi SIM قبل التحويل لـ E-SIM
+                </div>
+            </div>
+
+            <!-- جدول الباقات الحالية -->
+            <div class="section">
+                <h2 class="section-title">الباقات الحالية Current</h2>
+                
+                <div class="subsection">
+                    <h3 class="subsection-title">Prepaid (خطوط الكارت)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>النظام</th>
+                                <th>الوصف</th>
+                                <th>الحالة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>14PT Rayah</strong></td>
+                                <td>14 قرش الثانية</td>
+                                <td><span class="cost">Current</span></td>
+                                <td>النظام الحالي</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Balak</strong></td>
+                                <td>نظام بالك</td>
+                                <td><span class="cost">Current</span></td>
+                                <td>النظام الحالي</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Flex 2024</strong></td>
+                                <td>أحدث باقات فليكس</td>
+                                <td><span class="cost">Current</span></td>
+                                <td>النظام الحالي الجديد</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Flex 2021</strong></td>
+                                <td>باقات فليكس السابقة</td>
+                                <td><span class="cost paid">GF</span></td>
+                                <td>لا يزال عليها عملاء</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="note">
+                        <strong>ملاحظة مهمة:</strong> بعد انتهاء باقة فليكس، العميل يُحاسب بـ <strong>19 قرش</strong> للدقيقة والميجابايت والرسالة.
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Postpaid (خطوط الفاتورة)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>النظام</th>
+                                <th>الوصف</th>
+                                <th>الحالة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>RED</strong></td>
+                                <td>النظام الحالي لخطوط الفاتورة</td>
+                                <td><span class="cost">Current</span></td>
+                                <td>النظام الوحيد المتاح حالياً</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="note">
+                        <strong>ملاحظة:</strong> جميع الأنظمة الأخرى للفاتورة أصبحت Grandfather (GF).
+                    </div>
+                </div>
+            </div>
+
+            <!-- جدول Dedicated Accounts -->
+            <div class="section">
+                <h2 class="section-title">جدول Dedicated Accounts (DA)</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DA رقم</th>
+                            <th>الاسم</th>
+                            <th>الوصف</th>
+                            <th>النوع</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">DA 2</span></td>
+                            <td>الفلكسات الحالية</td>
+                            <td>الفلكسات المتبقية في الباقة الحالية</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 9</span></td>
+                            <td>عروض 365</td>
+                            <td>العروض والهدايا من برنامج 365</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 23</span></td>
+                            <td>ضعف الباقة</td>
+                            <td>ضعف الباقة في النظام القديم</td>
+                            <td><span class="cost paid">GF</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 32</span></td>
+                            <td>الباقات الإضافية</td>
+                            <td>Add-ons النظام القديم</td>
+                            <td><span class="cost paid">GF</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 36</span></td>
+                            <td>مشاركة الفلكسات</td>
+                            <td>مشاركة فلكسات النظام القديم</td>
+                            <td><span class="cost paid">GF</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 48</span></td>
+                            <td>خدمات شكرا</td>
+                            <td>رصيد خدمات شكرا (رنلي، ادفعلي، كلمني، عالنوتة)</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 50</span></td>
+                            <td>النوتة (استلاف قديم)</td>
+                            <td>النوتة استلاف النظام القديم</td>
+                            <td><span class="cost paid">GF</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 51</span></td>
+                            <td>المترحل</td>
+                            <td>الفلكسات المترحلة من الشهر السابق</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 161</span></td>
+                            <td>ضريبة الدمغة</td>
+                            <td>ضريبة الدمغة المستحقة</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 233</span></td>
+                            <td>النوتة (نظام جديد)</td>
+                            <td>النوتة النظام الجديد</td>
+                            <td><span class="cost">CU</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 174</span></td>
+                            <td>كروت الفكة 13 جنيه</td>
+                            <td>وحدات كارت الفكة 300 وحدة</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 202</span></td>
+                            <td>كروت الفكة 16.5 جنيه</td>
+                            <td>وحدات كارت الفكة 425 وحدة</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 176</span></td>
+                            <td>كروت الفكة 19.5 جنيه</td>
+                            <td>وحدات كارت الفكة 550 وحدة</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 177</span></td>
+                            <td>كروت الفكة 26 جنيه</td>
+                            <td>وحدات كارت الفكة 750 وحدة</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 31</span></td>
+                            <td>باقات الإنترنت الأساسية</td>
+                            <td>ميجابايتس باقات MI الشهرية</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 35</span></td>
+                            <td>باقات الإنترنت الإضافية</td>
+                            <td>Add-ons وباقات MI الإضافية</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 37</span></td>
+                            <td>باقات الإنترنت المترحلة</td>
+                            <td>ميجابايتس مترحلة من الشهر السابق</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 38</span></td>
+                            <td>باقات Plus</td>
+                            <td>VF Plus Bundles (YouTube, TikTok, PUBG)</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 39</span></td>
+                            <td>باقات WatchIT</td>
+                            <td>باقات WatchIT الشهرية والأسبوعية</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">DA 40</span></td>
+                            <td>باقات PUBG</td>
+                            <td>باقات PUBG اليومية والشهرية</td>
+                            <td>Current</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>ملاحظات مهمة عن الـ DA:</strong><br>
+                    • <strong>GF</strong> = Grandfather (النظام القديم)<br>
+                    • <strong>CU</strong> = Current (النظام الحالي)<br>
+                    • يمكن رؤية هذه البيانات في CCAT >> Account Admin >> Dedicated Account<br>
+                    • DA 50 و DA 233 يظهران المبالغ المستحقة للسداد في نظام النوتة
+                </div>
+            </div>
+
+            <!-- أكواد الخدمات -->
+            <div class="section">
+                <h2 class="section-title">أكواد الخدمات الأساسية</h2>
+                
+                <div class="subsection">
+                    <h3 class="subsection-title">Balance Transfer</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>حدود</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">868</span></td>
+                                <td>الخدمة الصوتية</td>
+                                <td><span class="cost paid">20 قرش</span></td>
+                                <td>29 قرش نظام بالثانية</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*868*2*رقم*المبلغ#</span></td>
+                                <td>تحويل رصيد</td>
+                                <td><span class="cost paid">19 قرش + 2%</span></td>
+                                <td>1-50 جنيه</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Call Tone</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">5555</span></td>
+                                <td>الخدمة الصوتية</td>
+                                <td><span class="cost paid">50 قرش/دقيقة</span></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*055*Code#</span></td>
+                                <td>تشغيل أغنية</td>
+                                <td><span class="cost paid">1 قرش</span></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*055*0#</span></td>
+                                <td>إلغاء Call Tone</td>
+                                <td><span class="cost paid">1 قرش</span></td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Mobile Internet</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الكود</th>
+                                <th>الاستخدام</th>
+                                <th>التكلفة</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">*2000*03#</span></td>
+                                <td>Flex Extra 60</td>
+                                <td><span class="cost paid">4 جنيه</span></td>
+                                <td>قابل للتجديد</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*2000*15#</span></td>
+                                <td>Add-on 150 MB</td>
+                                <td><span class="cost paid">6.5 جنيه</span></td>
+                                <td>قابل للتجديد</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*2000*22#</span></td>
+                                <td>PUBG Bundle</td>
+                                <td><span class="cost">حسب النوع</span></td>
+                                <td>يومية أو شهرية</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">*00#</span></td>
+                                <td>VF Plus Bundles</td>
+                                <td><span class="cost">حسب الباقة</span></td>
+                                <td>YouTube, TikTok, PUBG</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- أكواد أخرى مهمة -->
+            <div class="section">
+                <h2 class="section-title">أكواد أخرى مهمة</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الكود</th>
+                            <th>الاستخدام</th>
+                            <th>التكلفة</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">*400#</span></td>
+                            <td>التحقق من 4G/VoLTE</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*9001#</span></td>
+                            <td>EOCN - تفعيل</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>معرفة الرصيد بعد المكالمة</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*777#</span></td>
+                            <td>MCK Pull</td>
+                            <td><span class="cost">حسب الاستخدام</span></td>
+                            <td>المكالمات الفائتة</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*888*3#</span></td>
+                            <td>MCK Push - تفعيل</td>
+                            <td><span class="cost paid">5 ج/شهر أو 20 ق/يوم</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">##002#</span></td>
+                            <td>إلغاء جميع التحويلات</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*888*5#</span></td>
+                            <td>تفعيل Roaming</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">*202#</span></td>
+                            <td>باقات Roaming</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">7001</span></td>
+                            <td>Vodafone Cash</td>
+                            <td><span class="cost">مجاني</span></td>
+                            <td>24/7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <strong>ملاحظة مهمة:</strong> هذا الدليل مستخرج من مواد تدريب فودافون الرسمية. يُرجى التأكد من أحدث الأسعار والأكواد من النظام الداخلي قبل إعطاء المعلومات للعملاء.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
